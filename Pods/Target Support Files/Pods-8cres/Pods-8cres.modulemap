@@ -1,0 +1,6 @@
+framework module Pods_8cres {
+  umbrella header "Pods-8cres-umbrella.h"
+
+  export *
+  module * { export * }
+}
