@@ -31,6 +31,14 @@ class TestingCreateAccountUIFieldProperties: XCTestCase {
         XCTAssertEqual(response, true)
     }
     
+    func testEmailFunctionEmptyContent() throws {
+        let emailTextFiel = ""
+        
+        let response = sut.isValidEmail(emailTextFiel)
+        
+        XCTAssertEqual(response, false)
+    }
+    
     func testEmailFunctionMissingAtSymbol() throws {
         let emailTextFiel = "Testingtesting.com"
         

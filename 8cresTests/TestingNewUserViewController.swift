@@ -96,6 +96,14 @@ class TestingNewUserViewController: XCTestCase {
         XCTAssertEqual(response, true)
     }
     
+    func testPhoneNumberValidationFunctionIncorrectEmptyInput() throws {
+        let phoneNumber = ""
+        
+        let response = sut.isValidPhoneNumber(phoneNumber)
+        
+        XCTAssertEqual(response, true)
+    }
+    
     func testPhoneNumberValidationFunctionMissingNumbers() throws {
         let phoneNumber = "111-222-333"
         

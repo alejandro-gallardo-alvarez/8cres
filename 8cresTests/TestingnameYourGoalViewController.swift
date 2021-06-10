@@ -23,8 +23,16 @@ class TestingnameYourGoalViewController: XCTestCase {
             sut = nil
             try super.tearDownWithError()
         }
-        
-    func testHomePropertyGoalInputCorrect() throws {
+    
+    func testHomePropertyGoalInputCorrectNoSpaces() throws {
+        let homeGoal = "testing"
+
+        let response = sut.isValidHomeGoal(homeGoal)
+
+        XCTAssertEqual(response, true)
+    }
+    
+    func testHomePropertyGoalInputCorrectWithSpacec() throws {
         let homeGoal = "testing testing testing"
 
         let response = sut.isValidHomeGoal(homeGoal)

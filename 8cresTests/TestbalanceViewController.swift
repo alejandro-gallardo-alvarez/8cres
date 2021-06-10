@@ -128,7 +128,7 @@ class TestbalanceViewController: XCTestCase {
     
     func testTransferFromCheckingIsNotEmptyIsNotEmpty() {
         
-        let notEmpty = "Testing"
+        let notEmpty = "0123456789"
         
         let response = sut.validateTransferIsNotEmpty(notEmpty)
         

@@ -23,8 +23,16 @@ class TestlocationViewController: XCTestCase {
         sut = nil
         try super.tearDownWithError()
     }
-        
-    func testLocationTextfieldCorrectInputNoComma() throws {
+    
+    func testLocationTextfieldCorrectInputOneWord() throws {
+        let location = "Testing"
+
+        let response = sut.isValidLocationInput(location)
+
+        XCTAssertEqual(response, true)
+    }
+    
+    func testLocationTextfieldCorrectInputNoCommaTwoWords() throws {
         let location = "Testing Testing"
 
         let response = sut.isValidLocationInput(location)
