@@ -44,8 +44,6 @@ class GetStartedLoginViewController: UIViewController {
         // addedd contraints
         NSLayoutConstraint.activate([
             loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            //where is the top Anchor connected to ???! Black Magic ?
-            //loginButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
             loginButton.widthAnchor.constraint(equalToConstant: 300),
             loginButton.heightAnchor.constraint(equalToConstant: 50)
         ])
